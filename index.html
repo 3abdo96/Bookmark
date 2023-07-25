@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Bookmark</title>
+  </head>
+  <body>
+    <div
+      class="container d-flex flex-column justify-content-center align-items-center py-5"
+    >
+      <h1 class="py-2 position-relative">Bookmarker</h1>
+      <div
+        class="bookmark w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center"
+      >
+        <label for="siteName" class="pb-2 fw-semibold">
+          <i class="fa-solid fa-book-bookmark pe-2"></i>
+          Site Name
+        </label>
+
+        <input
+          type="text"
+          id="siteName"
+          class="form-control"
+          placeholder="Bookmark Name"
+        />
+
+        <label for="siteURL" class="pb-2 fw-semibold">
+          <i class="fa-solid fa-link pe-2"></i>
+          Site URL
+        </label>
+
+        <input
+          type="text"
+          id="siteURL"
+          class="form-control"
+          placeholder="Website URL"
+        />
+
+        <button
+          class="btn btn-danger px-5 mt-5"
+          id="submitBook"
+          onclick="addURL()"
+        >
+          Submit
+        </button>
+      </div>
+
+      <div
+        class="w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center"
+      >
+        <input
+          type="text"
+          id="searchBar"
+          class="form-control"
+          placeholder="Search"
+          onkeyup="searchBookmark(this.value)"
+        />
+      </div>
+      <table class="table table-striped text-center mt-5">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+
+        <tbody id="tableList"></tbody>
+      </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

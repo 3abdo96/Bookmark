@@ -1,0 +1,41 @@
+
+body{
+    background-color: #f7ecde;
+}
+*::selection{
+    color:#000;
+        background-color: #fec260;
+}
+.container h1{
+    font-size: 50px;
+        font-family: "Pacifico",
+            cursive;
+        color: #352e28;
+}
+
+.container h1:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30%;
+    background-color: #fec260;
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.container h1:hover::before{
+    height: 70%;
+}
+
+.bookmark{
+        border-top: 2px dotted #352e28;
+        border-bottom: 2px dotted #352e28;
+        text-align: left;
+}
+
+.bookmark label{
+    text-align: left;
+}
+
